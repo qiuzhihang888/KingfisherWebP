@@ -26,8 +26,10 @@ let package = Package(
             exclude: ["KingfisherWebP-ObjC"]
         ),
         .target(
-            name: "KingfisherWebP-ObjC",
-            dependencies: ["libwebp"]
-        )
+    name: "KingfisherWebP-ObjC",
+    dependencies: [
+        .product(name: "libwebp", package: "libwebp-Xcode")
+    ]
+)
     ]
 )
